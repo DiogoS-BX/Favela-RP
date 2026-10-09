@@ -94,7 +94,8 @@ p { margin: 0; }
 .btn--red { background: var(--red-btn); color: var(--white); }
 .btn--yellow { background: var(--yellow); color: var(--ink); }
 .btn--blue { background: var(--blue); color: var(--white); text-transform: uppercase; font-weight: 600; }
-.btn--icon svg { width: 16px; height: 16px; }
+.btn--icon svg, .btn--icon img { width: 18px; height: 18px; }
+.btn--icon { padding-left: 8px; }
 
 /* ---------- Placeholder de imagem que ainda não existe ---------- */
 .img-missing {
@@ -369,7 +370,7 @@ p { margin: 0; }
 }
 .clash__league { width: 200px; }
 .clash__content { max-width: 260px; }
-.clash__logo { width: 180px; margin-bottom: 20px; }
+.clash__logo { width: 220px; margin-bottom: 20px; }
 .clash__content p { font-size: 14px; line-height: 1.4; margin-bottom: 12px; color: rgba(255,255,255,.9); }
 .clash__content strong { color: var(--white); }
 .clash__content .btn { margin-top: 4px; }
