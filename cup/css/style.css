@@ -576,7 +576,8 @@ p { margin: 0; }
   .title--md { font-size: 40px; }
   .how__steps { columns: 1; max-width: none; }
   .how__steps li { gap: 18px; margin-bottom: 28px; }
-  .how__steps li:nth-child(4) { break-before: auto; }
+  .how__steps li:nth-child(4) { break-before: auto; margin-bottom: 28px; }
+  .how__steps li:nth-child(n+4) p { max-width: none; }
   .how__num { flex-basis: 56px; font-size: 52px; -webkit-text-stroke-width: 1.2px; }
   .how__steps p { max-width: none; }
   .how .center { margin-top: 16px; }
