@@ -15,6 +15,17 @@ menu.addEventListener('click', (e) => {
   }
 });
 
+// Links internos (#secao): rola na própria página, mesmo com <base> ativo
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+    history.replaceState(null, '', location.pathname + link.getAttribute('href'));
+  });
+});
+
 // Enquanto os assets do Figma não forem adicionados em /assets,
 // mostra uma caixa com o nome do arquivo esperado no lugar da imagem.
 function showPlaceholder(img) {

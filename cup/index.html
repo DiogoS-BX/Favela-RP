@@ -3,13 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Garante que os caminhos relativos funcionem também em ".../cup" (sem barra no final)
+    (function () {
+      var p = location.pathname;
+      if (!/\/$/.test(p) && !/\.html?$/.test(p)) document.write('<base href="' + p + '/">');
+    })();
+  </script>
   <title>Competitivo | League Royale Favela Gaming</title>
   <meta name="description" content="Monte a sua equipe, faça sua inscrição e tenha um nome de peso do Clash Royale no comando do seu time! Campeonato online League Royale Favela Gaming.">
-  <link rel="icon" href="/cup/assets/logo-favela-gaming.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/logo-favela-gaming.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Vina+Sans&family=Kanit:wght@400;600;800&family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/cup/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -17,7 +24,7 @@
   <header class="header">
     <div class="container header__inner">
       <a href="https://favelagaming.gg/" class="header__logo" aria-label="Favela Gaming">
-        <img src="/cup/assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
+        <img src="assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
       </a>
       <button class="header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
@@ -36,7 +43,7 @@
     <section class="hero">
       <div class="container hero__content">
         <div class="hero__brand">
-          <img class="hero__league" src="/cup/assets/logo-league-royale.webp" alt="League Royale Favela Gaming" data-label="logo-league-royale.webp">
+          <img class="hero__league" src="assets/logo-league-royale.webp" alt="League Royale Favela Gaming" data-label="logo-league-royale.webp">
           <span class="hero__divider" aria-hidden="true"></span>
           <h1 class="hero__title"><small>A favela tá</small> pronta pra entrar na arena!</h1>
         </div>
@@ -47,7 +54,7 @@
         <a href="#inscricao" class="btn btn--red">Inscreva-se agora!</a>
         <div class="hero__sponsor">
           <span>Patrocínio:</span>
-          <a href="https://www.claro.com.br/" target="_blank" rel="noopener"><img class="logo-white" src="/cup/assets/logo-claro.webp" alt="Claro" data-label="logo-claro.webp"></a>
+          <a href="https://www.claro.com.br/" target="_blank" rel="noopener"><img class="logo-white" src="assets/logo-claro.webp" alt="Claro" data-label="logo-claro.webp"></a>
         </div>
       </div>
     </section>
@@ -79,12 +86,12 @@
           <h2 class="title title--lg">Confira<br>as datas do<br>League Royale<br>Favela Gaming!</h2>
         </div>
         <div class="card dates__dragon">
-          <img src="/cup/assets/dragao.webp" alt="Bebê dragão do Clash Royale comemorando" data-label="dragao.webp" loading="lazy">
+          <img src="assets/dragao.webp" alt="Bebê dragão do Clash Royale comemorando" data-label="dragao.webp" loading="lazy">
         </div>
         <div class="dates__side">
           <a href="#inscricao" class="card card--red dates__cta">Inscreva-se agora!</a>
           <div class="card dates__photo">
-            <img src="/cup/assets/menina-celular.webp" alt="Jogadora usando o celular" data-label="menina-celular.webp" loading="lazy">
+            <img src="assets/menina-celular.webp" alt="Jogadora usando o celular" data-label="menina-celular.webp" loading="lazy">
           </div>
         </div>
         <div class="card card--light dates__table">
@@ -102,7 +109,7 @@
     <section class="reqs" id="requisitos">
       <div class="container reqs__grid">
         <div class="reqs__art">
-          <img src="/cup/assets/requisitos-jogadores.webp" alt="Dois jogadores comemorando com o celular na mão" data-label="requisitos-jogadores.webp" loading="lazy">
+          <img src="assets/requisitos-jogadores.webp" alt="Dois jogadores comemorando com o celular na mão" data-label="requisitos-jogadores.webp" loading="lazy">
         </div>
         <div class="reqs__content">
           <h2 class="title title--lg">Requisitos<br>para<br>participar:</h2>
@@ -122,13 +129,13 @@
     <!-- ===================== CLASH ROYALE ===================== -->
     <section class="clash">
       <div class="container clash__grid">
-        <img class="clash__league" src="/cup/assets/logo-league-royale-escuro.webp" alt="League Royale Favela Gaming" data-label="logo-league-royale-escuro.webp" loading="lazy">
+        <img class="clash__league" src="assets/logo-league-royale-escuro.webp" alt="League Royale Favela Gaming" data-label="logo-league-royale-escuro.webp" loading="lazy">
         <div class="clash__content">
-          <img class="clash__logo" src="/cup/assets/logo-clash-royale.webp" alt="Clash Royale" data-label="logo-clash-royale.webp" loading="lazy">
+          <img class="clash__logo" src="assets/logo-clash-royale.webp" alt="Clash Royale" data-label="logo-clash-royale.webp" loading="lazy">
           <p>Os melhores jogadores de comunidade se enfrentam no Clash Royale.</p>
           <p><strong>Acompanhe as nossas redes sociais e fique por dentro do campeonato!</strong></p>
           <a href="https://www.instagram.com/favelagamingofc/" target="_blank" rel="noopener" class="btn btn--yellow btn--sm btn--icon">
-            <img src="/cup/assets/icone-instagram-redondo.svg" alt="" width="18" height="18">
+            <img src="assets/icone-instagram-redondo.svg" alt="" width="18" height="18">
             Siga o Favela Gaming
           </a>
         </div>
@@ -151,10 +158,10 @@
       <div class="container">
         <p class="partners__title">Quem faz o Favela Gaming acontecer</p>
         <ul class="partners__logos">
-          <li><a href="https://gerandofalcoes.com/" target="_blank" rel="noopener"><img src="/cup/assets/logo-gerando-falcoes.webp" alt="Gerando Falcões" data-label="logo-gerando-falcoes.webp" loading="lazy"></a></li>
-          <li><a href="https://www.youtube.com/@YouTubeBrasil" target="_blank" rel="noopener"><img src="/cup/assets/logo-youtube-gaming.webp" alt="YouTube Gaming" data-label="logo-youtube-gaming.webp" loading="lazy"></a></li>
-          <li><a href="https://finallevel.com.br/" target="_blank" rel="noopener"><img src="/cup/assets/logo-final-level.webp" alt="Final Level Co." data-label="logo-final-level.webp" loading="lazy"></a></li>
-          <li class="partners__break"><a href="https://www.claro.com.br/" target="_blank" rel="noopener"><img src="/cup/assets/logo-claro.webp" alt="Claro" data-label="logo-claro.webp" loading="lazy"></a></li>
+          <li><a href="https://gerandofalcoes.com/" target="_blank" rel="noopener"><img src="assets/logo-gerando-falcoes.webp" alt="Gerando Falcões" data-label="logo-gerando-falcoes.webp" loading="lazy"></a></li>
+          <li><a href="https://www.youtube.com/@YouTubeBrasil" target="_blank" rel="noopener"><img src="assets/logo-youtube-gaming.webp" alt="YouTube Gaming" data-label="logo-youtube-gaming.webp" loading="lazy"></a></li>
+          <li><a href="https://finallevel.com.br/" target="_blank" rel="noopener"><img src="assets/logo-final-level.webp" alt="Final Level Co." data-label="logo-final-level.webp" loading="lazy"></a></li>
+          <li class="partners__break"><a href="https://www.claro.com.br/" target="_blank" rel="noopener"><img src="assets/logo-claro.webp" alt="Claro" data-label="logo-claro.webp" loading="lazy"></a></li>
         </ul>
       </div>
     </section>
@@ -167,7 +174,7 @@
         <p class="social__label">Acompanhe nas<br>redes sociais</p>
         <div class="social__rows">
           <div class="social__row">
-            <img class="social__brand" src="/cup/assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
+            <img class="social__brand" src="assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
             <div class="social__links">
               <span class="social__group">
                 <a href="https://www.instagram.com/favelagamingofc/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><use href="#i-instagram"/></svg></a>
@@ -182,7 +189,7 @@
             </div>
           </div>
           <div class="social__row">
-            <img class="social__brand" src="/cup/assets/logo-cpn.webp" alt="CPN" data-label="logo-cpn.webp" loading="lazy">
+            <img class="social__brand" src="assets/logo-cpn.webp" alt="CPN" data-label="logo-cpn.webp" loading="lazy">
             <div class="social__links">
               <a class="social__group" href="https://www.instagram.com/copanobru/" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-instagram"/></svg>
@@ -199,11 +206,11 @@
 
       <div class="footer__main">
         <div class="footer__about">
-          <img src="/cup/assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
+          <img src="assets/logo-favela-gaming.svg" alt="Favela Gaming" data-label="logo-favela-gaming.svg">
           <p>Uma parceria Final Level, YouTube Gaming e Gerando Falcões, o Favela Gaming foi feito para impulsionar talentos de grupos sub-representados e oferecer ferramentas de desenvolvimento profissional dentro do universo gamer.</p>
         </div>
         <div class="footer__clash">
-          <img src="/cup/assets/logo-clash-royale.webp" alt="Clash Royale" data-label="logo-clash-royale.webp" loading="lazy">
+          <img src="assets/logo-clash-royale.webp" alt="Clash Royale" data-label="logo-clash-royale.webp" loading="lazy">
           <a href="https://clashroyale.com" target="_blank" rel="noopener" class="btn btn--blue btn--sm">Jogue grátis</a>
         </div>
         <nav class="footer__nav" aria-label="Rodapé">
@@ -237,6 +244,6 @@
     <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></symbol>
   </svg>
 
-  <script src="/cup/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

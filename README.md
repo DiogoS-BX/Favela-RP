@@ -11,7 +11,9 @@ cup/
   assets/      imagens (lista em cup/assets/LEIA-ME.md)
 ```
 
-Os caminhos são absolutos (`/cup/...`), então a pasta `cup/` precisa ficar na raiz do site.
+Os caminhos são relativos: a pasta `cup/` funciona em qualquer endereço (`/cup`, `/cup/` ou dentro de subpastas).
+
+`index.html` e `_redirects` na raiz servem só para o preview (GitHub Pages / Netlify) e não devem ir para o site.
 
 ## Ver localmente
 
