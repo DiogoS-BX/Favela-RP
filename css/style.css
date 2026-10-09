@@ -196,6 +196,7 @@ p { margin: 0; }
   text-transform: uppercase;
   opacity: .6;
 }
+.hero__sponsor a { display: inline-block; }
 .hero__sponsor img { width: 64px; }
 .logo-white { filter: brightness(0) invert(1); }
 
@@ -406,6 +407,8 @@ p { margin: 0; }
   justify-content: center;
   gap: 24px 40px;
 }
+.partners__logos a { display: block; transition: opacity .15s; }
+.partners__logos a:hover { opacity: .7; }
 .partners__logos img { height: 30px; width: auto; max-width: 40vw; object-fit: contain; }
 .partners__logos .img-missing { min-width: 150px; }
 .partners__break { flex-basis: 100%; display: flex; justify-content: center; }
