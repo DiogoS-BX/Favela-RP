@@ -1,19 +1,17 @@
-// Menu mobile
+// Menu mobile (tela cheia)
 const toggle = document.querySelector('.header__toggle');
 const menu = document.getElementById('menu');
 
-toggle.addEventListener('click', () => {
-  const open = toggle.getAttribute('aria-expanded') === 'true';
-  toggle.setAttribute('aria-expanded', String(!open));
-  menu.classList.toggle('is-open', !open);
-});
+function setMenu(open) {
+  toggle.setAttribute('aria-expanded', String(open));
+  toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  menu.classList.toggle('is-open', open);
+  document.body.classList.toggle('menu-open', open);
+}
 
-menu.addEventListener('click', (e) => {
-  if (e.target.tagName === 'A') {
-    toggle.setAttribute('aria-expanded', 'false');
-    menu.classList.remove('is-open');
-  }
-});
+toggle.addEventListener('click', () => setMenu(toggle.getAttribute('aria-expanded') !== 'true'));
+menu.addEventListener('click', (e) => { if (e.target.tagName === 'A') setMenu(false); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
 // Links internos (#secao): rola na própria página, mesmo com <base> ativo
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
