@@ -21,3 +21,12 @@ Os caminhos são relativos: a pasta `cup/` funciona em qualquer endereço (`/cup
 python3 -m http.server 8000
 # abra http://localhost:8000/cup/
 ```
+
+## Subir no servidor (export estático do Next)
+
+```bash
+python3 scripts/gerar_deploy.py   # gera deploy/cup.html, deploy/cup-assets/ e deploy/cup-deploy.zip
+```
+
+Na raiz do site: renomeie o `cup.html` atual para backup (ex.: `cup_OLD3.html`), envie o `cup-deploy.zip`
+e extraia. Ficam `cup.html` (nova página em /cup) e a pasta `cup-assets/`.
