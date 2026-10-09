@@ -14,7 +14,8 @@
   --blue: #1a5cff;
   --ink: #241319;
 
-  --font-title: "Anton", "Bebas Neue", Impact, sans-serif;
+  --font-title: "Vina Sans", "Anton", Impact, sans-serif;
+  --font-kanit: "Kanit", "Open Sans", sans-serif;
   --font-body: "Open Sans", system-ui, sans-serif;
 
   --container: 1120px;
@@ -57,9 +58,9 @@ p { margin: 0; }
   line-height: .95;
   letter-spacing: .5px;
 }
-.title--xl { font-size: clamp(40px, 5.2vw, 64px); }
-.title--lg { font-size: clamp(36px, 4.4vw, 54px); }
-.title--md { font-size: clamp(28px, 3.4vw, 42px); }
+.title--xl { font-size: clamp(46px, 6vw, 74px); }
+.title--lg { font-size: clamp(42px, 5vw, 62px); }
+.title--md { font-size: clamp(32px, 3.9vw, 48px); }
 
 /* O cortado do "CØMO" */
 .o-slash { position: relative; display: inline-block; }
@@ -163,17 +164,17 @@ p { margin: 0; }
 .hero__divider { align-self: stretch; width: 2px; background: rgba(255,255,255,.8); }
 .hero__title {
   margin: 0;
-  max-width: 340px;
+  max-width: 300px;
   font-family: var(--font-title);
   font-weight: 400;
-  font-size: clamp(38px, 4.6vw, 58px);
+  font-size: clamp(44px, 5.2vw, 66px);
   line-height: .95;
   text-transform: uppercase;
 }
 .hero__title small {
   display: block;
   margin-bottom: 4px;
-  font-family: var(--font-body);
+  font-family: var(--font-kanit);
   font-weight: 800;
   font-size: .42em;
   letter-spacing: 1px;
@@ -301,8 +302,8 @@ p { margin: 0; }
   text-transform: uppercase;
 }
 .dates__row:last-child { border-bottom: 0; }
-.dates__row dt { font-size: 28px; line-height: 1; }
-.dates__row dd { margin: 0; font-size: 22px; line-height: 1.2; white-space: nowrap; }
+.dates__row dt { font-size: 32px; line-height: 1; }
+.dates__row dd { margin: 0; font-size: 26px; line-height: 1.2; white-space: nowrap; text-transform: none; }
 .dates__row small {
   display: block;
   margin-top: 2px;
