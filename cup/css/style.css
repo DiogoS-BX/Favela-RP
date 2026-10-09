@@ -61,7 +61,7 @@ p { margin: 0; }
   text-transform: uppercase;
   line-height: .88;
 }
-.title--xl { font-size: calc(90 * var(--s)); }
+.title--xl { font-size: calc(100 * var(--s)); }
 .title--lg { font-size: calc(92 * var(--s)); }
 .title--md { font-size: calc(66 * var(--s)); line-height: .92; }
 
@@ -183,7 +183,7 @@ p { margin: 0; }
 }
 .hero__text {
   position: relative;
-  max-width: calc(470 * var(--s));
+  max-width: calc(445 * var(--s));
   margin: calc(52 * var(--s)) 0 calc(30 * var(--s));
   font-size: max(14px, calc(23 * var(--s)));
   font-weight: 300;
@@ -193,9 +193,8 @@ p { margin: 0; }
   position: absolute;
   left: calc(-47 * var(--s));
   top: calc(4 * var(--s));
-  width: max(14px, calc(20 * var(--s)));
+  width: max(14px, calc(21 * var(--s)));
   height: auto;
-  color: var(--yellow);
 }
 .hero__content > .btn { min-width: calc(298 * var(--s)); height: max(40px, calc(48 * var(--s))); font-size: max(13px, calc(16 * var(--s))); border-radius: calc(6 * var(--s)); }
 .hero__sponsor { margin-top: calc(48 * var(--s)); }
@@ -214,7 +213,7 @@ p { margin: 0; }
 /* =========================================================
    COMO VAI FUNCIONAR
    ========================================================= */
-.how { position: relative; padding: calc(48 * var(--s)) 0 calc(170 * var(--s)); }
+.how { position: relative; padding: calc(30 * var(--s)) 0 calc(170 * var(--s)); }
 .how__grid {
   display: grid;
   grid-template-columns: calc(415 * var(--s)) 1fr;
@@ -224,14 +223,10 @@ p { margin: 0; }
 .how__head .title { position: relative; z-index: 1; line-height: .9; }
 .how__stripe {
   position: absolute;
-  left: calc(-105 * var(--s));
-  top: calc(332 * var(--s));
-  width: calc(760 * var(--s));
-  height: calc(135 * var(--s));
-  transform: rotate(-38deg);
-  background: radial-gradient(circle, var(--red) 1.8px, transparent 2.2px) 0 0 / 5px 5px;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 35%, #000 70%);
-          mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.5) 35%, #000 70%);
+  left: calc(-20 * var(--s));
+  top: calc(-5 * var(--s));
+  width: calc(736 * var(--s));
+  max-width: none;
   pointer-events: none;
 }
 .how__steps {
